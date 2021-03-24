@@ -18,6 +18,8 @@
             </div>
         </div>
         </div>
+
+        <!--video frame-->
     <div class="col-md-6">
         <div class="card shadow mb-4">
             <!-- Card Header - Accordion -->
