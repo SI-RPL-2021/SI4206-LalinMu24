@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/home-polantas', function () {
-    return view('index');
+    return view('polantas.polantas-home');
 });
