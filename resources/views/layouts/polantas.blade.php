@@ -89,7 +89,11 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">List Perempatan :</h6>
-                        <a class="collapse-item" href="#">Perempatan 1</a>
+                        <a class="collapse-item" href="#">Persimpangan Pasteur</a>
+                        <a class="collapse-item" href="#">Perempatan MC Donald Dago</a>
+                        <a class="collapse-item" href="#">Perempatan Buah Batu Soekarno-Hatta</a>
+                        <a class="collapse-item" href="#">Lampu Merah Gasibu</a>
+                        <a class="collapse-item" href="#">Perempatan 5</a>
                     </div>
                 </div>
             </li>
