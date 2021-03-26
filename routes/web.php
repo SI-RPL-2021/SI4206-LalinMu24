@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PerempatanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home-polantas', function () {
+Route::get('/polantas-home', function () {
     return view('polantas.polantas-home');
 });
+
+Route::get('/polantas-peta', [PerempatanController::class, 'indexPeta']);
+
+Route::get('/polantas-lampu', [PerempatanController::class, 'indexLampu']);
