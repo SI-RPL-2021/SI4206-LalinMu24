@@ -7,16 +7,17 @@ use Illuminate\Http\Request;
 
 class PerempatanController extends Controller
 {
-    public function indexPeta()
+    public function index()
     {
         $perempatans = Perempatan::all();
         // dd($perempatans);
         return view('polantas.polantas-peta', compact('perempatans'));
     }
 
-    public function indexLampu()
+    public function detail($id)
     {
-        $lampus = Perempatan::all();
-        return view('polantas.polantas-lampu', compact('lampus'));
+        $perempatans = Perempatan::find($id);
+
+        return view('polantas.detail-peta', compact('perempatans'));
     }
 }

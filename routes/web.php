@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\LampuController;
 use App\Http\Controllers\PerempatanController;
+use App\Http\Controllers\PolantasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,10 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/polantas-home', function () {
-    return view('polantas.polantas-home');
-});
+// Polantas Routes
+Route::get('/polantas-home', [PolantasController::class, 'index']);
 
-Route::get('/polantas-peta', [PerempatanController::class, 'indexPeta']);
+Route::get('/polantas-peta', [PerempatanController::class, 'index']);
 
-Route::get('/polantas-lampu', [PerempatanController::class, 'indexLampu']);
+Route::get('/polantas-lampu', [LampuController::class, 'index']);
+
+Route::get('/detail-map/{id}', [PerempatanController::class, 'detail']);
+
+Route::get('/edit-lampu/{id}', [LampuController::class, 'edit']);

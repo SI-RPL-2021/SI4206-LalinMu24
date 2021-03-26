@@ -28,7 +28,7 @@
                                 <td>{{$l->merah}}</td>
                                 <td>{{$l->kuning}}</td>
                                 <td>{{$l->hijau}}</td>
-                                <td class="text-center"><a class="btn btn-warning" href="#" role="button"><i class="fas fa-edit"></i> Edit</a></td>
+                                <td class="text-center"><a class="btn btn-warning" href="/edit-lampu/{{$l->id}}" role="button"><i class="fas fa-edit"></i> Edit</a></td>
                             </tr>
                             @endforeach
                         </tbody>

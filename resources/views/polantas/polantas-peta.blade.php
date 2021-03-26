@@ -22,7 +22,7 @@
                             <tr>
                                 <td>{{$value+1}}</td>
                                 <td>Perempatan {{$p->nama}}</td>
-                                <td class="text-center"><a class="btn btn-success" href="#" role="button"><i class="fas fa-info-circle"></i> Detail</a></td>
+                                <td class="text-center"><a class="btn btn-success" href="/detail-map/{{$p->id}}" role="button"><i class="fas fa-info-circle"></i> Detail</a></td>
                             </tr>
                             @endforeach
                         </tbody>
