@@ -16,8 +16,10 @@ class PerempatanController extends Controller
 
     public function detail($id)
     {
-        $perempatans = Perempatan::find($id);
+        $perempatan = Perempatan::find($id);
 
-        return view('polantas.detail-peta', compact('perempatans'));
+        // dd($perempatan->lengans);
+
+        return view('polantas.detail-peta', compact('perempatan'));
     }
 }

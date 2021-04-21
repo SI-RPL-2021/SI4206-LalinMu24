@@ -14,21 +14,15 @@
                             <tr class="text-center">
                                 <th>#</th>
                                 <th>Nama</th>
-                                <th>Merah</th>
-                                <th>Kuning</th>
-                                <th>Hijau</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach($lampus as $value => $l)
                             <tr>
-                                <td>{{$value+1}}</td>
+                                <td class="text-center">{{$value+1}}</td>
                                 <td>Perempatan {{$l->nama}}</td>
-                                <td>{{$l->merah}}</td>
-                                <td>{{$l->kuning}}</td>
-                                <td>{{$l->hijau}}</td>
-                                <td class="text-center"><a class="btn btn-warning" href="/edit-lampu/{{$l->id}}" role="button"><i class="fas fa-edit"></i> Edit</a></td>
+                                <td class="text-center"><a class="text-primary" href="/edit-lampu/{{$l->id}}" role="button"><i class="fas fa-info-circle"></i></a></td>
                             </tr>
                             @endforeach
                         </tbody>

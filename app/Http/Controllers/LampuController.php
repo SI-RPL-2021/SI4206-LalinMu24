@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Lengan;
 use App\Perempatan;
 use Illuminate\Http\Request;
 
@@ -15,8 +16,8 @@ class LampuController extends Controller
 
     public function edit($id)
     {
-        $lampus = Perempatan::find($id);
+        $lampu = Perempatan::find($id);
 
-        return view('polantas.edit-lampu', compact('lampus'));
+        return view('polantas.edit-lampu', compact('lampu'));
     }
 }

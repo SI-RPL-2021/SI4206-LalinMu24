@@ -11,6 +11,10 @@
 
     <title>Polantas Dashboard</title>
 
+    <!-- Fonts Lampu Merah -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
     <!-- Custom fonts for this template-->
     <link href="{{URL::to('/')}}/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -20,6 +24,41 @@
 
     <!-- Custom styles for this page -->
     <link href="{{URL::to('/')}}/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <!-- Traffic Light CSS -->
+    <style>
+        #isiqfor1,#isiqfor2,#isiqfor3,#isiqfor4 {
+            border: 2px solid black;
+            padding: 10px;
+            width: 70px;
+        }
+
+        #isiqfor1>div,#isiqfor2>div,#isiqfor3>div,#isiqfor4>div {
+            width: 50px;
+            height: 50px;
+            margin: 5px 0;
+            opacity: 0.1;
+            border: 1px solid #333;
+            border-radius: 50%;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        #isiqfor1>div.on, #isiqfor2>div.on, #isiqfor3>div.on,#isiqfor4>div.on{
+            opacity: 1;
+            transition: opacity 200ms linear;
+        }
+    </style>
 
 </head>
 
@@ -32,7 +71,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/polantas-home">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cone-striped" viewBox="0 0 16 16">
                         <path d="M9.97 4.88l.953 3.811C10.158 8.878 9.14 9 8 9c-1.14 0-2.159-.122-2.923-.309L6.03 4.88C6.635 4.957 7.3 5 8 5s1.365-.043 1.97-.12zm-.245-.978L8.97.88C8.718-.13 7.282-.13 7.03.88L6.274 3.9C6.8 3.965 7.382 4 8 4c.618 0 1.2-.036 1.725-.098zm4.396 8.613a.5.5 0 0 1 .037.96l-6 2a.5.5 0 0 1-.316 0l-6-2a.5.5 0 0 1 .037-.96l2.391-.598.565-2.257c.862.212 1.964.339 3.165.339s2.303-.127 3.165-.339l.565 2.257 2.391.598z" />
@@ -135,7 +174,7 @@
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
+    <a class="scroll-to-top rounded bg-primary" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
 
@@ -159,22 +198,23 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{URL::to('/')}}/vendor/jquery/jquery.min.js"></script>
+    <script src="{{URL::to('/')}}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="{{URL::to('/')}}/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+    <script src="{{URL::to('/')}}/js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="{{URL::to('/')}}/vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="{{URL::to('/')}}/js/demo/chart-area-demo.js"></script>
+    <script src="{{URL::to('/')}}/js/demo/chart-pie-demo.js"></script>
 
+    @stack('js')
 </body>
 
 </html>

@@ -26,3 +26,5 @@ Route::get('/polantas-lampu', [LampuController::class, 'index']);
 Route::get('/detail-map/{id}', [PerempatanController::class, 'detail']);
 
 Route::get('/edit-lampu/{id}', [LampuController::class, 'edit']);
+
+
