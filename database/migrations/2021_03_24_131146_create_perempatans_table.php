@@ -16,9 +16,9 @@ class CreatePerempatansTable extends Migration
         Schema::create('perempatans', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->integer('merah');
-            $table->integer('kuning');
-            $table->integer('hijau');
+            $table->string('alamat');
+            $table->string('src');
+            $table->string('youtube');
             $table->timestamps();
         });
     }

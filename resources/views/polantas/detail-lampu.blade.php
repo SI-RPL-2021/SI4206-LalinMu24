@@ -9,16 +9,20 @@
                 <h6 class="m-0 font-weight-bold text-primary">Data Lampu Perempatan {{$lampu->nama}}</h6>
             </div>
             <div class="card-body">
+            <div class="d-flex justify-content-end">
+                <a href="/edit-lampu/{{$lampu->id}}" class="btn btn-outline-warning mb-3" role="button">
+                    <i class="fas fa-edit"></i> Edit
+                </a>
+            </div>
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr class="text-center">
                                 <th>#</th>
-                                <th>Lenang</th>
+                                <th>Lengan</th>
                                 <th>Merah</th>
                                 <th>Kuning</th>
                                 <th>Hijau</th>
-                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -29,7 +33,6 @@
                                 <td>{{$lengan->merah}}</td>
                                 <td>{{$lengan->kuning}}</td>
                                 <td>{{$lengan->hijau}}</td>
-                                <td class="text-center"><a class="text-warning" href="#" role="button"><i class="fas fa-edit"></i></a></td>
                             </tr>
                             @endforeach
                         </tbody>

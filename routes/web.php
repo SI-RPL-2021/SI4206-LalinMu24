@@ -25,6 +25,10 @@ Route::get('/polantas-lampu', [LampuController::class, 'index']);
 
 Route::get('/detail-map/{id}', [PerempatanController::class, 'detail']);
 
-Route::get('/edit-lampu/{id}', [LampuController::class, 'edit']);
+Route::get('/detail-lampu/{id}', [LampuController::class, 'detailLampu']);
+
+Route::get('/edit-lampu/{lengan_id}', [LampuController::class, 'editLampu']);
+
+Route::patch('/update-lampu/{perempatan_id}', [LampuController::class, 'update']);
 
 

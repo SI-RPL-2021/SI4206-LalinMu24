@@ -25,6 +25,9 @@
     <!-- Custom styles for this page -->
     <link href="{{URL::to('/')}}/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
+    <!-- tostr laravel -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+
     <!-- Traffic Light CSS -->
     <style>
         #isiqfor1,#isiqfor2,#isiqfor3,#isiqfor4 {
@@ -213,6 +216,10 @@
     <!-- Page level custom scripts -->
     <script src="{{URL::to('/')}}/js/demo/chart-area-demo.js"></script>
     <script src="{{URL::to('/')}}/js/demo/chart-pie-demo.js"></script>
+    
+    <!-- toastr -->
+    <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+    {!! Toastr::message() !!}
 
     @stack('js')
 </body>

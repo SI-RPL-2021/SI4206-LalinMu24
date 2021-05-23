@@ -22,7 +22,11 @@
                             <tr>
                                 <td class="text-center">{{$value+1}}</td>
                                 <td>Perempatan {{$l->nama}}</td>
-                                <td class="text-center"><a class="text-primary" href="/edit-lampu/{{$l->id}}" role="button"><i class="fas fa-info-circle"></i></a></td>
+                                <td class="text-center">
+                                    <a class="text-primary mr-2" href="/detail-lampu/{{$l->id}}" role="button">
+                                        <i class="fas fa-info-circle"></i>
+                                    </a>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>
