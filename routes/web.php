@@ -32,3 +32,21 @@ Route::get('/edit-lampu/{lengan_id}', [LampuController::class, 'editLampu']);
 Route::patch('/update-lampu/{perempatan_id}', [LampuController::class, 'update']);
 
 
+// Admin Routes
+
+Route::get('/admin-home', [PerempatanController::class, 'adminIndex']);
+
+Route::get('/admin-peta', [PerempatanController::class, 'adminPeta']);
+
+Route::get('/tambah-peta', function(){
+    return view('admin.tambah-peta');
+});
+
+Route::post('/proses-peta', [PerempatanController::class, 'store']);
+
+Route::delete('/delete-peta/{id}', [PerempatanController::class, 'destroy']);
+
+Route::get('/edit-peta/{id}', [PerempatanController::class, 'edit']);
+
+Route::patch('/update-peta/{id}', [PerempatanController::class, 'update']);
+
