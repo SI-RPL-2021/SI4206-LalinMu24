@@ -9,8 +9,9 @@
                 <h6 class="m-0 font-weight-bold text-primary">Data Lampu Perempatan {{$lampu->nama}}</h6>
             </div>
             <div class="card-body">
-            <div class="d-flex justify-content-end">
-                <a href="/edit-lampu/{{$lampu->id}}" class="btn btn-outline-warning mb-3" role="button">
+            <div class="d-flex justify-content-end mb-3">
+                <a class="btn btn-outline-success mr-2" href="#" role="button"><i class="fas fa-plus"></i> Tambah Lengan</a>
+                <a href="/edit-lampu/{{$lampu->id}}" class="btn btn-outline-warning" role="button">
                     <i class="fas fa-edit"></i> Edit
                 </a>
             </div>

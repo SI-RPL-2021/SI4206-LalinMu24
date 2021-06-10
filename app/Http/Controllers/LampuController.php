@@ -51,4 +51,13 @@ class LampuController extends Controller
 
     }
 
+    public function destroy($perempatan_id)
+    {
+        Lengan::where('perempatan_id', $perempatan_id)->delete();
+
+        Toastr::success('Berhasil hapus Lengan', 'Info');
+
+        return redirect('/admin-peta');
+    }
+
 }

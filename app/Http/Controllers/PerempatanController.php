@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Lengan;
 use App\Perempatan;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
@@ -37,7 +38,9 @@ class PerempatanController extends Controller
     {
         $perempatan = Perempatan::all();
 
-        return view('admin.admin-peta', compact('perempatan'));
+        $lengan = Lengan::all();
+
+        return view('admin.admin-peta', compact('perempatan','lengan'));
     }
 
     public function store(Request $request)
@@ -64,7 +67,11 @@ class PerempatanController extends Controller
 
     public function destroy($id)
     {
-        Perempatan::where('id', $id)->delete();
+        $perempatan = Perempatan::where('id', $id);
+
+        // $perempatan->lengans()->delete();
+        
+        $perempatan->delete();
 
         Toastr::success('Berhasil hapus perempatan', 'Info');
 
@@ -97,7 +104,29 @@ class PerempatanController extends Controller
         Toastr::success('Berhasil update perempatan', 'Info');
 
         return redirect('/admin-peta');
+    }
 
+    public function editLengan($id)
+    {
+        $peta = Perempatan::find($id);
+
+        return view('admin.tambah-lengan', compact('peta'));
+    }
+
+    public function storeLengan(Request $request)
+    {   
+        $validateData = $request->validate([
+            'lengan' => 'required|numeric'
+        ]);
+
+        Lengan::insert([
+            'perempatan_id' => $request->perempatan_id,
+            'lengan' => $request->lengan
+        ]);
+
+        Toastr::success('Berhasil tambah lengan', 'Info');
+
+        return redirect('/admin-peta');
 
     }
 

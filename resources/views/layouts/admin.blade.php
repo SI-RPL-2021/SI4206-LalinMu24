@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Polantas Dashboard</title>
+    <title>Admin Dashboard</title>
 
     <!-- Fonts Lampu Merah -->
     <link rel="preconnect" href="https://fonts.gstatic.com">

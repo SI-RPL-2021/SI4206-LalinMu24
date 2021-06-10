@@ -50,3 +50,10 @@ Route::get('/edit-peta/{id}', [PerempatanController::class, 'edit']);
 
 Route::patch('/update-peta/{id}', [PerempatanController::class, 'update']);
 
+Route::get('/edit-lengan/{id}', [PerempatanController::class, 'editLengan']);
+
+Route::post('/tambah-lengan', [PerempatanController::class, 'storeLengan']);
+
+Route::delete('/delete-lengan/{perempatan_id}', [LampuController::class, 'destroy']);
+
+
