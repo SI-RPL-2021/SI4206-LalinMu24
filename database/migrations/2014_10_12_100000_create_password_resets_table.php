@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ChangeColumnToOnDeleteInLengansTable extends Migration
+class CreatePasswordResetsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class ChangeColumnToOnDeleteInLengansTable extends Migration
      */
     public function up()
     {
-        Schema::table('lengans', function (Blueprint $table) {
-            $table->foreignId('perempatan_id')->references('id')->on('perempatans')->onDelete('cascade')->change();
+        Schema::create('password_resets', function (Blueprint $table) {
+            $table->string('email')->index();
+            $table->string('token');
+            $table->timestamp('created_at')->nullable();
         });
     }
 
@@ -25,8 +27,6 @@ class ChangeColumnToOnDeleteInLengansTable extends Migration
      */
     public function down()
     {
-        Schema::table('lengans', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('password_resets');
     }
 }

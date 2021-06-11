@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 // Polantas Routes
 Route::get('/polantas-home', [PolantasController::class, 'index']);
 
@@ -56,4 +57,12 @@ Route::post('/tambah-lengan', [PerempatanController::class, 'storeLengan']);
 
 Route::delete('/delete-lengan/{perempatan_id}', [LampuController::class, 'destroy']);
 
+Route::get('/admin-users', function(){
+    return view('admin.admin-users');
+});
 
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
