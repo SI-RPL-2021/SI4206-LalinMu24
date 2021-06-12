@@ -9,7 +9,7 @@
         <div class="card-body" style="background-color: #E4ECEF;">
             <div class="row">
                 <div class="col-sm-8">
-                    <form class="ml-3" method="POST" action="{{ route('register') }}">
+                    <form class="ml-3" method="POST" action="/tambah-user">
                         @csrf
                         <div class="form-group row">
                             <label for="role_id" class="col-sm-4 col-form-label @error('role_id') is-invalid @enderror"><strong>{{ __('Role Id') }}</strong></label>

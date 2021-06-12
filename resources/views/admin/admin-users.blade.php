@@ -30,10 +30,10 @@
                                 <td>{{$user->email}}</td>
                                 <td>Polantas</td>
                                 <td class="text-center">
-                                    <form action="#" method="POST">
+                                    <form action="/delete-user/{{$user->id}}" method="POST">
                                         @csrf
                                         @method('delete')
-                                        <a class="btn btn-primary" href="#" role="button"><i class="fas fa-edit"></i> Edit</a>
+                                        <a class="btn btn-primary" href="/edit-user/{{$user->id}}" role="button"><i class="fas fa-edit"></i> Edit</a>
                                         <button class="btn btn-danger" type="submit"><i class="fas fa-trash"></i> Delete</button>
                                     </form>
                                 </td>
