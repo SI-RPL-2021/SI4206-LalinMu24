@@ -12,6 +12,12 @@
                     <form class="ml-3" method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="form-group row">
+                            <label for="role_id" class="col-sm-4 col-form-label @error('role_id') is-invalid @enderror"><strong>{{ __('Role Id') }}</strong></label>
+                            <div class="col-sm-8">
+                                <input id="role_id" type="text" class="form-control" name="role_id" value="2" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <label for="name" class="col-sm-4 col-form-label"><strong>{{ __('Name') }}</strong></label>
                             <div class="col-sm-8">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>

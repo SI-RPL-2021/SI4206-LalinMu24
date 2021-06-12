@@ -57,9 +57,7 @@ Route::post('/tambah-lengan', [PerempatanController::class, 'storeLengan']);
 
 Route::delete('/delete-lengan/{perempatan_id}', [LampuController::class, 'destroy']);
 
-Route::get('/admin-users', function(){
-    return view('admin.admin-users');
-});
+Route::get('/admin-users', [PolantasController::class, 'userPolantas']);
 
 
 

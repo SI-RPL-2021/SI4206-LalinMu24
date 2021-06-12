@@ -18,14 +18,17 @@
                                 <th>#</th>
                                 <th>Nama</th>
                                 <th>Email</th>
+                                <th>Role</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
+                        @foreach($users as $value => $user)
                             <tr>
-                                <td class="text-center"></td>
-                                <td></td>
-                                <td></td>
+                                <td class="text-center">{{$value+=1}}</td>
+                                <td>{{$user->name}}</td>
+                                <td>{{$user->email}}</td>
+                                <td>Polantas</td>
                                 <td class="text-center">
                                     <form action="#" method="POST">
                                         @csrf
@@ -35,7 +38,7 @@
                                     </form>
                                 </td>
                             </tr>
-                          
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
