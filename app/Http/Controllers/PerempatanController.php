@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Lengan;
 use App\Perempatan;
+use App\User;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 
@@ -31,7 +32,9 @@ class PerempatanController extends Controller
 
         $count = Perempatan::count();
 
-        return view('admin.admin-home', compact('perempatan','count'));
+        $polantas = User::where('role_id', 2)->count();
+
+        return view('admin.admin-home', compact('perempatan','count','polantas'));
     }
 
     public function adminPeta()

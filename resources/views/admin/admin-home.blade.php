@@ -28,7 +28,7 @@
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                             Jumlah Polantas</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">3</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{$polantas}}</div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-user-secret fa-2x text-gray-300"></i>

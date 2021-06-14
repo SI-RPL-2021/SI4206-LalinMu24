@@ -28,7 +28,7 @@ class PolantasController extends Controller
             'role_id' => 'required',
         ]);
 
-        User::insert([
+        $user = User::insert([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
@@ -37,9 +37,11 @@ class PolantasController extends Controller
             "updated_at"=> Carbon::now()
         ]);
 
-        Toastr::success('Berhasil tambah User', 'Info');
+        if($user){
+            Toastr::success('Berhasil tambah User', 'Info');
 
-        return redirect('/admin-users');
+            return redirect('/admin-users');
+        }
     }
 
     public function userPolantas()

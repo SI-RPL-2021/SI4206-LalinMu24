@@ -9,7 +9,7 @@
             </div>
             <div class="card-body">
                 <div class="d-flex justify-content-end">
-                    <a class="btn btn-outline-success mb-3" href="{{ route('register') }}" role="button"><i class="fas fa-plus"></i> Tambah Polantas</a>
+                    <a class="btn btn-outline-success mb-3" href="/tambah-polantas" role="button"><i class="fas fa-plus"></i> Tambah Polantas</a>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
