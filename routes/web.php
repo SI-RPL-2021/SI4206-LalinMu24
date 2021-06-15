@@ -20,6 +20,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'index']);
 
+Route::get('/about', [IndexController::class, 'about']);
+
+Route::get('/index/detail-perempatan/{id}', [IndexController::class, 'detailPerempatan']);
+
 Route::middleware('auth')->group(function(){
 
     // Admin Routes

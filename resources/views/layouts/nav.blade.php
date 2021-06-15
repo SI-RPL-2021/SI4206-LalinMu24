@@ -10,6 +10,15 @@
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Hammersmith+One&display=swap" rel="stylesheet">
+
+        <style>
+            .judul{
+                font-family: 'Alfa Slab One', cursive;
+                font-family: 'Hammersmith One', sans-serif;
+            }
+        </style>
 
         <title>LalinMu 24</title>
     </head>
@@ -41,7 +50,7 @@
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container-fluid">
         @yield('content')
     </div>
 

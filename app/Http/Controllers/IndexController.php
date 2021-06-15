@@ -18,4 +18,24 @@ class IndexController extends Controller
 
         return view('index',compact('date','perempatans'));
     }
+    
+    public function about()
+    {
+        $time = Carbon::now();
+
+        $date = $time->format('Y-m-d');
+
+        return view('about',compact('date'));
+    }
+
+    public function detailPerempatan($id)
+    {
+        $perempatan = Perempatan::find($id);
+
+        $time = Carbon::now();
+
+        $date = $time->format('Y-m-d');
+
+        return view('detail-perempatan',compact('perempatan','date'));
+    }
 }
