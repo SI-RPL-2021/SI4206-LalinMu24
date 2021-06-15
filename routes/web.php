@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LampuController;
 use App\Http\Controllers\PerempatanController;
 use App\Http\Controllers\PolantasController;
@@ -17,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', [IndexController::class, 'index']);
 
 Route::middleware('auth')->group(function(){
 
