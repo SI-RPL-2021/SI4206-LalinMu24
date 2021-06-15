@@ -32,9 +32,11 @@ class PerempatanController extends Controller
 
         $count = Perempatan::count();
 
-        $polantas = User::where('role_id', 2)->count();
+        $polantas = User::where('role_id',2)->get();
 
-        return view('admin.admin-home', compact('perempatan','count','polantas'));
+        $polantasCount = User::where('role_id', 2)->count();
+
+        return view('admin.admin-home', compact('perempatan','count','polantas','polantasCount'));
     }
 
     public function adminPeta()

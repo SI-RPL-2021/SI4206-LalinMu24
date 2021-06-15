@@ -30,37 +30,70 @@ class AdminController extends Controller
             'email' => 'required|string|email|max:255',
         ]);
 
-        $extension = $request->image->extension();
-        $image = $request->image+'.'+$extension;
-        $request->move(public_path('img/profile/'), $image);
-
+        
         $checkPassword = $request->password;
 
-        if($checkPassword != null){
-            $updateAdmin = User::where('id', $id)->update([
-                'name' => $request->name,
-                'email' => $request->email,
-                'password' => Hash::make($request->password),
-                'image' => $image
-            ]);
-
-            if($updateAdmin){
-                Toastr::success('Berhasil update profile', 'Info');
-
-                return redirect('/admin-profile');
+        if ($request->image == null)
+        {
+            if($checkPassword != null){
+                $updateAdmin = User::where('id', $id)->update([
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'password' => Hash::make($request->password),
+                ]);
+    
+                if($updateAdmin){
+                    Toastr::success('Berhasil update profile', 'Info');
+    
+                    return redirect('/admin-profile/'.$id);
+                }
+    
+            }else{
+                $updateAdmin = User::where('id', $id)->update([
+                    'name' => $request->name,
+                    'email' => $request->email,
+                ]);
+    
+                if($updateAdmin){
+                    Toastr::success('Berhasil update profile', 'Info');
+    
+                    return redirect('/admin-profile/'.$id);
+                }
             }
-
         }else{
-            $updateAdmin = User::where('id', $id)->update([
-                'name' => $request->name,
-                'email' => $request->email,
-                'image' => $image,
-            ]);
 
-            if($updateAdmin){
-                Toastr::success('Berhasil update profile', 'Info');
+            $image = time().'.'.$request->image->extension();
 
-                return redirect('/admin-profile');
+            $request->image->move(public_path('img/profile/admin'), $image);
+
+            $request->image = $image;
+
+            if($checkPassword != null){
+                $updateAdmin = User::where('id', $id)->update([
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'password' => Hash::make($request->password),
+                    'image' => $image
+                ]);
+    
+                if($updateAdmin){
+                    Toastr::success('Berhasil update profile', 'Info');
+    
+                    return redirect('/admin-profile/'.$id);
+                }
+    
+            }else{
+                $updateAdmin = User::where('id', $id)->update([
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'image' => $image,
+                ]);
+    
+                if($updateAdmin){
+                    Toastr::success('Berhasil update profile', 'Info');
+    
+                    return redirect('/admin-profile/'.$id);
+                }
             }
         }
     }

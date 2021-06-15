@@ -28,7 +28,7 @@
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                             Jumlah Polantas</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{$polantas}}</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{$polantasCount}}</div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-user-secret fa-2x text-gray-300"></i>
@@ -75,5 +75,39 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="row mt-3">
+        <div class="col-md-12">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Data Polantas</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr class="text-center">
+                                    <th>#</th>
+                                    <th>Nama</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($polantas as $value => $p)
+                                <tr>
+                                    <td class="text-center">{{$value+1}}</td>
+                                    <td>{{$p->name}}</td>
+                                    <td>{{$p->email}}</td>
+                                    <td>Polantas</td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
 </div>
 @endsection

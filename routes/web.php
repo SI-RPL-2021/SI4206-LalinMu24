@@ -80,6 +80,12 @@ Route::middleware('auth')->group(function(){
         Route::get('/edit-lampu/{lengan_id}', [LampuController::class, 'editLampu']);
 
         Route::patch('/update-lampu/{perempatan_id}', [LampuController::class, 'update']);
+
+        Route::get('/polantas-profile/{id}', [PolantasController::class, 'profile']);
+
+        Route::get('/polantas-edit-profile/{id}', [PolantasController::class, 'editProfile']);
+
+        Route::patch('polantas-update-profile/{id}', [PolantasController::class, 'updateProfile']);
     });
 
     
