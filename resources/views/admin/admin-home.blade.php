@@ -100,7 +100,11 @@
                                     <td class="text-center">{{$value+1}}</td>
                                     <td>{{$p->name}}</td>
                                     <td>{{$p->email}}</td>
-                                    <td>Polantas</td>
+                                    <td class="text-center">
+                                        <div class="badge badge-primary text-wrap">
+                                            Polantas
+                                        </div>
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>

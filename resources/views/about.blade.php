@@ -69,7 +69,7 @@
         <div class="col-sm-6">
             <div class="d-flex justify-content-center">
                 <div class="row">
-                        <img src="{{URL::to('/')}}/img/undraw_profile.svg" width="100" height="100">
+                        <img src="{{URL::to('/')}}/img/asset/lanang.jpeg" width="130" height="130" class="rounded-circle border border-primary">
                     </div>
             </div>
             <div class="d-flex justify-content-center">
@@ -88,7 +88,7 @@
         <div class="col-sm-6">
             <div class="d-flex justify-content-center">
                 <div class="row">
-                        <img src="{{URL::to('/')}}/img/undraw_profile.svg" width="100" height="100">
+                        <img src="{{URL::to('/')}}/img/asset/hagai.jpg" width="130" height="130" class="rounded-circle border border-primary">
                     </div>
             </div>
             <div class="d-flex justify-content-center">
@@ -107,7 +107,7 @@
         <div class="col-sm-6 mt-5">
             <div class="d-flex justify-content-center">
                 <div class="row">
-                        <img src="{{URL::to('/')}}/img/undraw_profile.svg" width="100" height="100">
+                        <img src="{{URL::to('/')}}/img/asset/rafli.jpeg" width="130" height="130" class="rounded-circle border border-primary">
                     </div>
             </div>
             <div class="d-flex justify-content-center">
@@ -126,7 +126,7 @@
         <div class="col-sm-6 mt-5">
             <div class="d-flex justify-content-center">
                 <div class="row">
-                        <img src="{{URL::to('/')}}/img/undraw_profile.svg" width="100" height="100">
+                        <img src="{{URL::to('/')}}/img/asset/paxilla.jpeg" width="130" height="130" class="rounded-circle border border-primary">
                     </div>
             </div>
             <div class="d-flex justify-content-center">
@@ -145,7 +145,7 @@
         <div class="col-sm-12 mt-3">
             <div class="d-flex justify-content-center">
                 <div class="row">
-                        <img src="{{URL::to('/')}}/img/undraw_profile.svg" width="100" height="100">
+                        <img src="{{URL::to('/')}}/img/asset/jile.jpeg" width="130" height="130" class="rounded-circle border border-primary">
                     </div>
             </div>
             <div class="d-flex justify-content-center">

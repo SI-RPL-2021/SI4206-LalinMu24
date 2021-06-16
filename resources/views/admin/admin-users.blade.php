@@ -28,7 +28,11 @@
                                 <td class="text-center">{{$value+=1}}</td>
                                 <td>{{$user->name}}</td>
                                 <td>{{$user->email}}</td>
-                                <td>Polantas</td>
+                                <td class="text-center">
+                                    <div class="badge badge-primary text-wrap">
+                                        Polantas
+                                    </div>
+                                </td>
                                 <td class="text-center">
                                     <form action="/delete-user/{{$user->id}}" method="POST">
                                         @csrf

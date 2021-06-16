@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row mt-5">
         <div class="col-sm-12">
-            <div class="card">
+            <div class="card shadow">
                 <div class="card-header bg-primary text-light">
                     <strong>Perempatan</strong>
                 </div>
@@ -22,7 +22,7 @@
                         @foreach($perempatans as $value => $perempatan)
                             <tr>
                                 <td>{{$value+=1}}</td>
-                                <td>{{$perempatan->nama}}</td>
+                                <td>Perempatan {{$perempatan->nama}}</td>
                                 <td>{{$perempatan->alamat}}</td>
                                 <td>
                                     <a class="btn btn-outline-primary" href="/index/detail-perempatan/{{$perempatan->id}}" role="button">
